@@ -44,11 +44,6 @@ jobs:
             files: |
               app/src-tauri/target/release/bundle/nsis/*.exe
               app/src-tauri/target/release/forever-launcher.exe
-          - os: macos-latest
-            bundles: dmg
-            target: universal-apple-darwin
-            artifact: Forever-Launcher-macOS
-            files: app/src-tauri/target/universal-apple-darwin/release/bundle/dmg/*.dmg
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
